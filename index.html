@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- IMPORTANT: correct viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Professional Cleaning Services</title>
-
-  <meta name="description" content="Affordable and professional home & office cleaning services. Book trusted cleaners near you.">
 
   <!-- Tracking Code -->
   <script defer data-domain="seahorse-app-xqlei.ondigitalocean.app/IYqtT4" src="https://api.publytics.net/js/script.manual.min.js"></script>
@@ -23,15 +22,19 @@
     }
 
     body {
-      background: #5a0f0f; /* image bg jaisa maroon */
-      color: #333;
+      background: #5a0f0f;
     }
 
-    /* Desktop Content */
+    /* DEFAULT: Desktop + Tablet */
     .desktop-content {
       display: block;
     }
 
+    .mobile-view {
+      display: none;
+    }
+
+    /* Desktop Website */
     header {
       background: #0a2540;
       color: #fff;
@@ -39,10 +42,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    header h1 {
-      font-size: 24px;
     }
 
     .cta-btn {
@@ -57,7 +56,7 @@
     .hero {
       height: 90vh;
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                  url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');
+        url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');
       background-size: cover;
       background-position: center;
       display: flex;
@@ -65,51 +64,25 @@
       justify-content: center;
       text-align: center;
       color: #fff;
-      padding: 20px;
-    }
-
-    .hero h2 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 30px;
     }
 
     .services {
-      padding: 60px 50px;
+      padding: 60px 20px;
       text-align: center;
-    }
-
-    .services h2 {
-      margin-bottom: 40px;
-      font-size: 32px;
     }
 
     .service-boxes {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
-      flex-wrap: wrap;
     }
 
     .box {
       background: #fff;
-      padding: 30px;
-      width: 300px;
+      padding: 20px;
+      width: 280px;
       border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    }
-
-    .box h3 {
-      margin-bottom: 15px;
-      color: #0a2540;
-    }
-
-    .box p {
-      font-size: 14px;
     }
 
     footer {
@@ -117,34 +90,34 @@
       color: #fff;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
     }
 
-    /* Mobile View */
-    .mobile-view {
-      display: none;
-      width: 100%;
-      height: 100vh;
-      background: #5a0f0f; /* same as image bg */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    /* 📱 ONLY PHONES */
+    @media (max-width: 767px) {
 
-    .mobile-view img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* NO CROP */
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
       .desktop-content {
-        display: none;
+        display: none !important;
       }
 
       .mobile-view {
+        display: flex !important;
+        width: 100%;
+        height: 100vh;
+        background: #5a0f0f;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mobile-view a {
+        width: 100%;
+        height: 100%;
         display: flex;
+      }
+
+      .mobile-view img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* NO CROP */
       }
     }
   </style>
@@ -152,7 +125,7 @@
 
 <body>
 
-<!-- Desktop Website -->
+<!-- DESKTOP + TABLET -->
 <div class="desktop-content">
 
   <header>
@@ -163,8 +136,8 @@
   <section class="hero">
     <div>
       <h2>Professional Cleaning Services</h2>
-      <p>Trusted home & office cleaning solutions at affordable prices.</p>
-      <a href="https://wa.me/918851521863" class="cta-btn">Get Instant Quote</a>
+      <p>India’s most trusted home & office cleaning</p>
+      <a href="https://wa.me/918851521863" class="cta-btn">Get Quote</a>
     </div>
   </section>
 
@@ -174,31 +147,31 @@
     <div class="service-boxes">
       <div class="box">
         <h3>Home Cleaning</h3>
-        <p>Deep cleaning for your home with professional equipment and trained staff.</p>
+        <p>Deep cleaning with trained professionals.</p>
       </div>
 
       <div class="box">
         <h3>Office Cleaning</h3>
-        <p>Keep your workspace clean and productive with our expert services.</p>
+        <p>Professional workspace cleaning service.</p>
       </div>
 
       <div class="box">
-        <h3>Sofa & Carpet Cleaning</h3>
-        <p>Advanced stain removal and sanitization for long-lasting freshness.</p>
+        <h3>Sofa Cleaning</h3>
+        <p>Remove stains & germs effectively.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 CleanPro Services | All Rights Reserved</p>
+    © 2026 CleanPro Services
   </footer>
 
 </div>
 
-<!-- Mobile / Tablet Image -->
+<!-- 📱 ONLY MOBILE IMAGE -->
 <div class="mobile-view">
-  <a href="https://wa.me/918851521863" style="width:100%; height:100%;">
-    <img src="innings11.png" alt="Cleaning Services">
+  <a href="https://wa.me/918851521863">
+    <img src="innings11.png" alt="Cleaning Service">
   </a>
 </div>
 
