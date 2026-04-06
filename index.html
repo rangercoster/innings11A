@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Cleaning Services in India | Home & Office Cleaning</title>
+
+  <meta name="description" content="Professional home and office cleaning services. Book trusted cleaners near you. Affordable, reliable and fast service.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #310300;
+      overflow: hidden; /* prevent scroll in ad mode */
+    }
+
+    /* HIDE WEBSITE BY DEFAULT */
+    #header, #footer, #container {
+      display: none;
+    }
+
+    header, footer {
+      background: #0a2540;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      color: #0a2540;
+    }
+
+    .hero p {
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #00b894;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .toggle-box {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .toggle-btn {
+      padding: 10px 20px;
+      background: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* FULL SCREEN AD FIX */
+    #adSection {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #310300;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    #adSection img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover; /* MAIN FIX */
+      border-radius: 0;
+      pointer-events: none;
+    }
+
+  </style>
+</head>
+<body>
+
+<header id="header">
+  <h2>CleanPro Services</h2>
+</header>
+
+<div class="container" id="container">
+
+  <div class="toggle-box">
+    <button class="toggle-btn" onclick="toggleAd()">Switch Mode</button>
+  </div>
+
+  <div id="mainContent">
+
+    <section class="hero">
+      <h1>Professional Cleaning Services</h1>
+      <p>Book trusted home & office cleaning services at affordable prices.</p>
+      <a href="https://wa.me/918851521863" class="btn">Book Now</a>
+    </section>
+
+    <section class="services">
+      <div class="card">
+        <h3>Home Cleaning</h3>
+        <p>Deep cleaning for kitchen, bathroom, and full house.</p>
+      </div>
+
+      <div class="card">
+        <h3>Office Cleaning</h3>
+        <p>Professional office cleaning services for a healthy workspace.</p>
+      </div>
+
+      <div class="card">
+        <h3>Sofa & Carpet</h3>
+        <p>Advanced cleaning for sofa, carpets and upholstery.</p>
+      </div>
+
+      <div class="card">
+        <h3>Bathroom Cleaning</h3>
+        <p>Remove stains, germs and bad odor effectively.</p>
+      </div>
+    </section>
+
+  </div>
+
+</div>
+
+<footer id="footer">
+  <p>© 2026 CleanPro Services | All Rights Reserved</p>
+</footer>
+
+<!-- FULL SCREEN CLICKABLE AD -->
+<div id="adSection" onclick="goToWhatsApp()">
+  <img src="innings.png" alt="Offer">
+</div>
+
+<script>
+  let isAdMode = true;
+
+  function updateUI() {
+    if (isAdMode) {
+      document.getElementById("header").style.display = "none";
+      document.getElementById("footer").style.display = "none";
+      document.getElementById("container").style.display = "none";
+      document.getElementById("adSection").style.display = "flex";
+      document.body.style.background = "#2b0d05";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.getElementById("header").style.display = "block";
+      document.getElementById("footer").style.display = "block";
+      document.getElementById("container").style.display = "block";
+      document.getElementById("adSection").style.display = "none";
+      document.body.style.background = "#f5f7fa";
+      document.body.style.overflow = "auto";
+    }
+  }
+
+  function toggleAd() {
+    isAdMode = !isAdMode;
+    updateUI();
+  }
+
+  function goToWhatsApp() {
+    window.location.href = "https://wa.me/918851521863";
+  }
+
+  window.onload = function () {
+    updateUI();
+  };
+</script>
+
+<!-- TRACKING -->
+<script defer data-domain="seahorse-app-xqlei.ondigitalocean.app/IYqtT4" src="https://api.publytics.net/js/script.manual.min.js"></script>
+<script>
+  window.publytics = window.publytics || function() { (window.publytics.q = window.publytics.q || []).push(arguments) };
+  publytics('pageview');
+</script>
+
+</body>
+</html>
