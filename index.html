@@ -1,170 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Cleaning Services</title>
 
-<title>Best Cleaning Services in India</title>
+  <meta name="description" content="Affordable and professional home & office cleaning services. Book trusted cleaners near you.">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Tracking Code -->
+  <script defer data-domain="seahorse-app-xqlei.ondigitalocean.app/IYqtT4" src="https://api.publytics.net/js/script.manual.min.js"></script>
+  <script>
+    window.publytics = window.publytics || function() { (window.publytics.q = window.publytics.q || []).push(arguments) };
+    publytics('pageview');
+  </script>
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #fff;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-/* DEFAULT WEBSITE SHOW */
-#header, #footer, #container {
-  display: block;
-}
+    body {
+      background: #f5f7fa;
+      color: #333;
+    }
 
-/* AD DEFAULT HIDE (IMPORTANT - FLASH FIX) */
-#adSection {
-  display: none;
-}
+    /* Desktop Content */
+    .desktop-content {
+      display: block;
+    }
 
-/* HEADER */
-header {
-  background: #0a2540;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
+    header {
+      background: #0a2540;
+      color: #fff;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-/* CONTAINER */
-.container {
-  padding: 30px;
-  max-width: 1100px;
-  margin: auto;
-}
+    header h1 {
+      font-size: 24px;
+    }
 
-/* HERO */
-.hero {
-  text-align: center;
-}
+    .cta-btn {
+      background: #25D366;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.hero h1 {
-  font-size: 36px;
-  color: #0a2540;
-}
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
 
-.hero p {
-  color: #555;
-}
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  background: #00b894;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 15px;
-}
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
 
-/* SERVICES */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
+    .services {
+      padding: 60px 50px;
+      text-align: center;
+    }
 
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-}
+    .services h2 {
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
 
-/* FULLSCREEN AD */
-#adSection {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #310300;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
+    .service-boxes {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-#adSection img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* FULL FIT */
-}
+    .box {
+      background: #fff;
+      padding: 30px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
 
-/* 📱 MOBILE + TABLET ONLY */
-@media (max-width: 1024px) {
+    .box h3 {
+      margin-bottom: 15px;
+      color: #0a2540;
+    }
 
-  #header, #footer, #container {
-    display: none;
-  }
+    .box p {
+      font-size: 14px;
+    }
 
-  #adSection {
-    display: flex; /* ONLY HERE SHOW */
-  }
+    footer {
+      background: #0a2540;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
 
-}
-</style>
+    /* Mobile Image View */
+    .mobile-view {
+      display: none;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .mobile-view img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .desktop-content {
+        display: none;
+      }
+
+      .mobile-view {
+        display: block;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header id="header">
-  <h2>CleanPro Services</h2>
-</header>
+<!-- Desktop Website -->
+<div class="desktop-content">
 
-<div class="container" id="container">
+  <header>
+    <h1>CleanPro Services</h1>
+    <a href="https://wa.me/918851521863" class="cta-btn">Book Now</a>
+  </header>
 
   <section class="hero">
-    <h1>Professional Cleaning Services</h1>
-    <p>Book trusted home & office cleaning services</p>
-    <a href="https://wa.me/918851521863" class="btn">Book Now</a>
+    <div>
+      <h2>Professional Cleaning Services</h2>
+      <p>Trusted home & office cleaning solutions at affordable prices.</p>
+      <a href="https://wa.me/918851521863" class="cta-btn">Get Instant Quote</a>
+    </div>
   </section>
 
   <section class="services">
-    <div class="card">
-      <h3>Home Cleaning</h3>
-      <p>Deep cleaning for full house.</p>
-    </div>
+    <h2>Our Services</h2>
 
-    <div class="card">
-      <h3>Office Cleaning</h3>
-      <p>Healthy workspace cleaning.</p>
-    </div>
+    <div class="service-boxes">
+      <div class="box">
+        <h3>Home Cleaning</h3>
+        <p>Deep cleaning for your home with professional equipment and trained staff.</p>
+      </div>
 
-    <div class="card">
-      <h3>Sofa Cleaning</h3>
-      <p>Advanced sofa cleaning.</p>
-    </div>
+      <div class="box">
+        <h3>Office Cleaning</h3>
+        <p>Keep your workspace clean and productive with our expert services.</p>
+      </div>
 
-    <div class="card">
-      <h3>Bathroom Cleaning</h3>
-      <p>Remove germs effectively.</p>
+      <div class="box">
+        <h3>Sofa & Carpet Cleaning</h3>
+        <p>Advanced stain removal and sanitization for long-lasting freshness.</p>
+      </div>
     </div>
   </section>
 
+  <footer>
+    <p>© 2026 CleanPro Services | All Rights Reserved</p>
+  </footer>
+
 </div>
 
-<footer id="footer">
-  <p>© 2026 CleanPro Services</p>
-</footer>
-
-<!-- FULLSCREEN AD -->
-<div id="adSection" onclick="goToWhatsApp()">
-  <img src="in.jpeg" alt="Offer">
+<!-- Mobile / Tablet Image -->
+<div class="mobile-view">
+  <a href="https://wa.me/918851521863">
+    <img src="in.jpeg" alt="Cleaning Services">
+  </a>
 </div>
-
-<script>
-function goToWhatsApp() {
-  window.location.href = "https://wa.me/918851521863";
-}
-</script>
 
 </body>
 </html>
