@@ -10,7 +10,9 @@
   <!-- Tracking Code -->
   <script defer data-domain="seahorse-app-xqlei.ondigitalocean.app/IYqtT4" src="https://api.publytics.net/js/script.manual.min.js"></script>
   <script>
-    window.publytics = window.publytics || function() { (window.publytics.q = window.publytics.q || []).push(arguments) };
+    window.publytics = window.publytics || function() {
+      (window.publytics.q = window.publytics.q || []).push(arguments)
+    };
     publytics('pageview');
   </script>
 
@@ -52,6 +54,7 @@
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
     }
 
     .hero {
@@ -124,12 +127,27 @@
     .mobile-view {
       display: none;
       width: 100%;
+      min-height: 100vh;
+      background: #000;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .mobile-view a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
       height: 100vh;
     }
 
     .mobile-view img {
-      width: 100%;
-      height: 100%;
+      display: block;
+      height: 100vh;
+      width: auto;
+      max-width: 100%;
+      max-height: 100vh;
       object-fit: contain;
     }
 
@@ -140,7 +158,7 @@
       }
 
       .mobile-view {
-        display: block;
+        display: flex;
       }
     }
   </style>
@@ -148,55 +166,55 @@
 
 <body>
 
-<!-- Desktop Website -->
-<div class="desktop-content">
+  <!-- Desktop Website -->
+  <div class="desktop-content">
 
-  <header>
-    <h1>CleanPro Services</h1>
-    <a href="https://wa.me/918851521863" class="cta-btn">Book Now</a>
-  </header>
+    <header>
+      <h1>CleanPro Services</h1>
+      <a href="https://wa.me/918851521863" class="cta-btn">Book Now</a>
+    </header>
 
-  <section class="hero">
-    <div>
-      <h2>Professional Cleaning Services</h2>
-      <p>Trusted home & office cleaning solutions at affordable prices.</p>
-      <a href="https://wa.me/918851521863" class="cta-btn">Get Instant Quote</a>
-    </div>
-  </section>
-
-  <section class="services">
-    <h2>Our Services</h2>
-
-    <div class="service-boxes">
-      <div class="box">
-        <h3>Home Cleaning</h3>
-        <p>Deep cleaning for your home with professional equipment and trained staff.</p>
+    <section class="hero">
+      <div>
+        <h2>Professional Cleaning Services</h2>
+        <p>Trusted home & office cleaning solutions at affordable prices.</p>
+        <a href="https://wa.me/918851521863" class="cta-btn">Get Instant Quote</a>
       </div>
+    </section>
 
-      <div class="box">
-        <h3>Office Cleaning</h3>
-        <p>Keep your workspace clean and productive with our expert services.</p>
+    <section class="services">
+      <h2>Our Services</h2>
+
+      <div class="service-boxes">
+        <div class="box">
+          <h3>Home Cleaning</h3>
+          <p>Deep cleaning for your home with professional equipment and trained staff.</p>
+        </div>
+
+        <div class="box">
+          <h3>Office Cleaning</h3>
+          <p>Keep your workspace clean and productive with our expert services.</p>
+        </div>
+
+        <div class="box">
+          <h3>Sofa & Carpet Cleaning</h3>
+          <p>Advanced stain removal and sanitization for long-lasting freshness.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="box">
-        <h3>Sofa & Carpet Cleaning</h3>
-        <p>Advanced stain removal and sanitization for long-lasting freshness.</p>
-      </div>
-    </div>
-  </section>
+    <footer>
+      <p>© 2026 CleanPro Services | All Rights Reserved</p>
+    </footer>
 
-  <footer>
-    <p>© 2026 CleanPro Services | All Rights Reserved</p>
-  </footer>
+  </div>
 
-</div>
-
-<!-- Mobile / Tablet Image -->
-<div class="mobile-view">
-  <a href="https://wa.me/918851521863">
-    <img src="innings11.png" alt="Cleaning Services">
-  </a>
-</div>
+  <!-- Mobile / Tablet Image -->
+  <div class="mobile-view">
+    <a href="https://wa.me/918851521863">
+      <img src="innings11.png" alt="Cleaning Services">
+    </a>
+  </div>
 
 </body>
 </html>
