@@ -14,10 +14,9 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       background: #310300;
-      overflow: hidden; /* prevent scroll in ad mode */
     }
 
-    /* HIDE WEBSITE BY DEFAULT */
+    /* DEFAULT HIDE */
     #header, #footer, #container {
       display: none;
     }
@@ -87,14 +86,14 @@
       border-radius: 5px;
     }
 
-    /* FULL SCREEN AD FIX */
+    /* FULL SCREEN AD */
     #adSection {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       background: #310300;
@@ -105,9 +104,15 @@
     #adSection img {
       width: 100vw;
       height: 100vh;
-      object-fit: cover; /* MAIN FIX */
-      border-radius: 0;
+      object-fit: cover;
       pointer-events: none;
+    }
+
+    /* 📱 MOBILE + TABLET ONLY (SHOW AD) */
+    @media (max-width: 1024px) {
+      #adSection {
+        display: flex;
+      }
     }
 
   </style>
@@ -162,30 +167,36 @@
   <p>© 2026 CleanPro Services | All Rights Reserved</p>
 </footer>
 
-<!-- FULL SCREEN CLICKABLE AD -->
+<!-- AD -->
 <div id="adSection" onclick="goToWhatsApp()">
-  <img src="innings.png" alt="Offer">
+  <img src="!nnings.jpeg" alt="Offer">
 </div>
 
 <script>
   let isAdMode = true;
 
+  function isMobileOrTablet() {
+    return window.innerWidth <= 1024;
+  }
+
   function updateUI() {
-    if (isAdMode) {
+
+    if (isMobileOrTablet() && isAdMode) {
+      // SHOW AD (mobile only)
       document.getElementById("header").style.display = "none";
       document.getElementById("footer").style.display = "none";
       document.getElementById("container").style.display = "none";
       document.getElementById("adSection").style.display = "flex";
-      document.body.style.background = "#2b0d05";
       document.body.style.overflow = "hidden";
     } else {
+      // SHOW WEBSITE (desktop OR after toggle)
       document.getElementById("header").style.display = "block";
       document.getElementById("footer").style.display = "block";
       document.getElementById("container").style.display = "block";
       document.getElementById("adSection").style.display = "none";
-      document.body.style.background = "#f5f7fa";
       document.body.style.overflow = "auto";
     }
+
   }
 
   function toggleAd() {
@@ -197,16 +208,8 @@
     window.location.href = "https://wa.me/918851521863";
   }
 
-  window.onload = function () {
-    updateUI();
-  };
-</script>
-
-<!-- TRACKING -->
-<script defer data-domain="seahorse-app-xqlei.ondigitalocean.app/IYqtT4" src="https://api.publytics.net/js/script.manual.min.js"></script>
-<script>
-  window.publytics = window.publytics || function() { (window.publytics.q = window.publytics.q || []).push(arguments) };
-  publytics('pageview');
+  window.onload = updateUI;
+  window.onresize = updateUI;
 </script>
 
 </body>
