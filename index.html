@@ -23,7 +23,7 @@
     }
 
     body {
-      background: #f5f7fa;
+      background: #5a0f0f; /* image bg jaisa maroon */
       color: #333;
     }
 
@@ -120,17 +120,21 @@
       margin-top: 40px;
     }
 
-    /* Mobile Image View */
+    /* Mobile View */
     .mobile-view {
       display: none;
       width: 100%;
       height: 100vh;
+      background: #5a0f0f; /* same as image bg */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .mobile-view img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain; /* NO CROP */
     }
 
     /* Responsive */
@@ -140,7 +144,7 @@
       }
 
       .mobile-view {
-        display: block;
+        display: flex;
       }
     }
   </style>
@@ -193,8 +197,8 @@
 
 <!-- Mobile / Tablet Image -->
 <div class="mobile-view">
-  <a href="https://wa.me/918851521863">
-    <img src="in.jpeg" alt="Cleaning Services">
+  <a href="https://wa.me/918851521863" style="width:100%; height:100%;">
+    <img src="innings11.png" alt="Cleaning Services">
   </a>
 </div>
 
